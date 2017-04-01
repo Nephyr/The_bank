@@ -1,0 +1,63 @@
+package business.entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Client extends Person {
+
+    private List<Account> accounts = new ArrayList<Account>();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                        // toString
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    @Override
+    public String toString() {
+        return "First Name: " + firstName + '\n' +
+                "Last Name: " + lastName + '\n' +
+                "Social Security Number: " + ssn + '\n' +
+                "Location: " + location + '\n' +
+                "Born in: " + yearOfBirth + '\n' +
+                "Accounts: " + accounts;
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                     // GETTERS AND SETTERS
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    public List<Account> getAccounts() {
+        return accounts;
+
+    }
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                    // CONSTRUCTOR
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public Client(String firstName, String lastName, int ssn, String location, int yearOfBirth) {
+        super(firstName, lastName, ssn, location, yearOfBirth);
+    }
+}
